@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+    h1 Add New Product
+    form(action="/products/add", method="post")
+        <div id="pnl"> 
+            .form-group
+                label(for="name") <b>Product Name</b>
+                input#name(type="text", class="form-control", placeholder="Name", name="name")
+            .form-group
+                label(for="Price") <b>Product Price</b>
+                input#Price(type="text", class="form-control", placeholder="Price", name="Price")
+            .form-group
+                label(for="pId") <b>Product Id</b>
+                input#productid(type="text" ,class="form-control",placeholder="Product Id", name="pId")
+            .form-group
+                label(for="Description") <b>Product Description</b>
+                textarea#Description(name="Description", class="form-control",cols="30", rows="10", placeholder="Description")    
+            input(type="submit", class="btn btn-info")    
+        </div>    
